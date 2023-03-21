@@ -14,6 +14,7 @@ pip install pandas
 pip3 install -U scikit-learn
  
 grep 'user_id' --col ./log_data.json.ori | awk -F '[:,]' '{print $(NF - 1)}' | sort -n | uniq > log.txt
+grep 'user_id' --col NeuralCD.json | awk -F '[:,]' '{print $(NF - 1)}' | sort -n | uniq > log.txt
 grep -nr 'log_num' --col ./log_data.json | awk '{print$NF}' | sort |uniq
  
  
